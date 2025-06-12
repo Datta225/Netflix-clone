@@ -42,7 +42,7 @@ jobs:
           docker tag netflix saravanadatta/netflix:latest
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
           docker push saravanadatta/netflix:latest
-          env:
+        env:
           DOCKER_CLI_ACI: 1
    
          
