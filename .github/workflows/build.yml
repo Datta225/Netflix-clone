@@ -26,7 +26,7 @@ jobs:
       #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
      ### 
       - name: install trivy
-    run: |
+        run: |
          #install trivy
          sudo apt-get install wget apt-transport-https gnupg lsb-release -y
          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
@@ -35,3 +35,4 @@ jobs:
          sudo apt-get install trivy -y
          #command to scan files
          trivy fs .
+         
